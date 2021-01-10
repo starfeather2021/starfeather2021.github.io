@@ -43,11 +43,19 @@
         }
     </style>
     
+    <script src="//cdn1.lncld.net/static/js/3.4.2/av-min.js"></script>
+    <script>
+      AV.init({
+        appId: 'iS2UKGS0FxIJzSEDonJPnP3y-gzGzoHsz',
+        appKey: 'uHvXN4lQoKXffviVCPaSpaOT'
+      })
+    </script>
+    
     <!--<script type="text/javascript">
       if (document.images) {
         var avatar = new Image();
-        avatar.src = '/imgs/avatar.jpg'
-        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg'.split(',')
+        avatar.src = '/imgs/avatar.jpeg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpeg'.split(',')
         var previewsPreLoad = []
         for(var i = 0; i < length; i++) {
           previewsPreLoad.push(new Image())
@@ -115,7 +123,6 @@
                 
                 
                 
-                
                 <li class="">
                     <a href="/categories">
                         <i class="fa fa-list"></i>分类
@@ -124,14 +131,11 @@
                 
                 
                 
-                
-                
                 <li class="">
                     <a href="/tags">
                         <i class="fa fa-tags"></i>标签
                     </a>
                 </li>
-                
                 
                 
                 
@@ -213,26 +217,26 @@
             <i class="fa fa-quote-right"></i>
         </div>
         <div class="author-panel text-center">
-            <img src="/imgs/avatar.jpg" width="140" height="140"
+            <img src="/imgs/avatar.jpeg" width="140" height="140"
                  alt="个人头像" class="author-image">
             <p class="author-description"></p>
         </div>
     </div>
 </aside>
     
-    <aside id="sidebar-recent_comments">
-    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    <aside id="sidebar-hot_posts">
+    <div class="panel panel-gal hot hidden-xs" data-aos="fade-up" data-aos-duration="2000">
         <div class="panel-heading">
-            <i class="fa fa-comments"></i>
-            最新评论
+            <i class="fa fa-fire"></i>
+            最热文章
             <i class="fa fa-times-circle panel-remove"></i>
             <i class="fa fa-chevron-circle-up panel-toggle"></i>
         </div>
         <ul class="list-group list-group-flush"></ul>
     </div>
 </aside>
-    
-    <!-- 要配置好leancloud才能开启此小工具 -->
     
     
     <aside id="sidebar-recent_posts">
@@ -308,15 +312,15 @@
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
     
     <li>
-        <a href="http://kdays.net/days/" target="_blank">KDays Forum</a>
+        <a href="https://flyingfish20201.github.io/" target="_blank">会飞的鱼的Blog</a>
     </li>
     
     <li>
-        <a href="http://www.gal123.com/" target="_blank">绅士导航♂</a>
+        <a href="VictoryFrank.github.io" target="_blank">VictoryFrank的Blog</a>
     </li>
     
     <li>
-        <a href="http://www.moe123.com/" target="_blank">萌导航</a>
+        <a href="https://github.com/ZEROKISEKI/hexo-theme-gal" target="_blank">主题地址</a>
     </li>
     
 </div>
@@ -325,15 +329,7 @@
                 <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
     
     <li>
-        <a href="https://github.com/ZEROKISEKI/" target="_blank">Github</a>
-    </li>
-    
-    <li>
-        <a href="https://coding.net/u/SORA1" target="_blank">Coding</a>
-    </li>
-    
-    <li>
-        <a href="https://www.zhihu.com/people/aonosora/activities" target="_blank">知乎</a>
+        <a href="https://blog.csdn.net/star_feather?spm=1000.2115.3001.5343" target="_blank">star_feather的博客</a>
     </li>
     
 </div>
@@ -403,13 +399,21 @@
     window.slideConfig = {
       prefix: '/imgs/slide/background',
       ext: 'jpg',
-      maxCount: '6'
+      maxCount: '7'
     }
 </script>
 
 <script src="/js/hs.js"></script>
 <script src="/js/blog.js"></script>
 
+
+
+<script>
+    window.hot_posts_count = '10'
+    // window.use_leancloud = 'true'
+</script>
+
+<script src="/js/comment/leancloud.js"></script>
 
 
 
