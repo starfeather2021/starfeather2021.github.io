@@ -88,17 +88,18 @@
             </button>
             <a href="http://example.com">
                 
-                <!-- 这里background使用imgs/${logo_image}(路径文件名) -->
                 <style>
                     #gal-header .navbar-brand {
-                        width: 200px;
-                        height: 50px;
-                        display: block;
-                        background: url('/imgs/logo.jpg') no-repeat;
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
                     }
                 </style>
-                    
-                <div class="navbar-brand"></div>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">starfeather的Blog</div>
                 
             </a>
         </div>
@@ -332,10 +333,6 @@
                 </li>
                 
                 
-                <li>
-                    <a href="/2021/01/08/hello-world/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
-                </li>
-                
             </ul>
             <div class="tab-content">
                 
@@ -355,19 +352,15 @@
     </li>
     
     <li>
+        <a href="https://blog.csdn.net/star_feather?spm=1000.2115.3001.5343" target="_blank">star_feather的博客</a>
+    </li>
+    
+    <li>
         <a href="https://github.com/ZEROKISEKI/hexo-theme-gal" target="_blank">主题地址</a>
     </li>
     
 </div>
                 
-                
-                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
-    
-    <li>
-        <a href="https://blog.csdn.net/star_feather?spm=1000.2115.3001.5343" target="_blank">star_feather的博客</a>
-    </li>
-    
-</div>
                 
             </div>
         </div>
@@ -434,7 +427,7 @@
     window.slideConfig = {
       prefix: '/imgs/slide/background',
       ext: 'jpg',
-      maxCount: '7'
+      maxCount: '6'
     }
 </script>
 

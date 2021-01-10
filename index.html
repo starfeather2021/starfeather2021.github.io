@@ -88,17 +88,18 @@
             </button>
             <a href="http://example.com">
                 
-                <!-- 这里background使用imgs/${logo_image}(路径文件名) -->
                 <style>
                     #gal-header .navbar-brand {
-                        width: 200px;
-                        height: 50px;
-                        display: block;
-                        background: url('/imgs/logo.jpg') no-repeat;
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
                     }
                 </style>
-                    
-                <div class="navbar-brand"></div>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">starfeather的Blog</div>
                 
             </a>
         </div>
@@ -162,9 +163,8 @@
     <!-- TODO 添加关闭公告框功能 -->
     <button type="button" class="close" data-dismiss="alert">×</button>
     <!-- 这里自行配置公告内容 -->
-    这里是公告内容
+    若有错误或问题，请发送至 635462604@qq.com 联系指正！！！
     <br>
-    配置相关说明请看<strong>_config.yml</strong>
     <!-- 自行配置公告内容结束 -->
 </div>
 
@@ -204,7 +204,7 @@
                 <a href="/2021/01/08/hello-world/">
                     <div class="img">
                         
-                        <img src="/imgs/preview/preview1.jpg" alt="Hello World">
+                        <img src="/imgs/preview/preview7.jpg" alt="Hello World">
                     </div>
                     <div class="info">
                         
@@ -240,7 +240,7 @@
             <p style="text-align: center;">
                 <a href="/2021/01/08/hello-world/">
                     
-                    <img src="/imgs/preview/preview6.jpg" alt="Hello World">
+                    <img src="/imgs/preview/preview5.jpg" alt="Hello World">
                 </a>
             </p>
         </div>
@@ -393,10 +393,6 @@
                 </li>
                 
                 
-                <li>
-                    <a href="/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
-                </li>
-                
             </ul>
             <div class="tab-content">
                 
@@ -416,19 +412,15 @@
     </li>
     
     <li>
+        <a href="https://blog.csdn.net/star_feather?spm=1000.2115.3001.5343" target="_blank">star_feather的博客</a>
+    </li>
+    
+    <li>
         <a href="https://github.com/ZEROKISEKI/hexo-theme-gal" target="_blank">主题地址</a>
     </li>
     
 </div>
                 
-                
-                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
-    
-    <li>
-        <a href="https://blog.csdn.net/star_feather?spm=1000.2115.3001.5343" target="_blank">star_feather的博客</a>
-    </li>
-    
-</div>
                 
             </div>
         </div>
@@ -495,7 +487,7 @@
     window.slideConfig = {
       prefix: '/imgs/slide/background',
       ext: 'jpg',
-      maxCount: '7'
+      maxCount: '6'
     }
 </script>
 
