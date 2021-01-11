@@ -206,16 +206,16 @@
     </div>
     <div class="content-article">
         <h1 id="MISC"><a href="#MISC" class="headerlink" title="MISC"></a>MISC</h1><h2 id="fakezip："><a href="#fakezip：" class="headerlink" title="fakezip："></a>fakezip：</h2><p>​        伪加密。（不知道为什么，7zip可以不解压直接打开…）解压压缩包报错文件头错误，将压缩包用winhex打开，修改加密位为00 00，保存。</p>
-<p><img src="C:\Users\63546\Desktop\writerup\DMCTF\Snipaste_2020-11-28_21-06-12.png"></p>
+<p><img src="/2021/01/11/DMCTFWP/Users\63546\Desktop\writerup\DMCTF\Snipaste_2020-11-28_21-06-12.png"></p>
 <p>解压出来一个音乐符号加密，直接找文本加密为音乐符号工具解密：</p>
 <p>（<a target="_blank" rel="noopener" href="https://www.qqxiuzi.cn/bianma/wenbenjiami.php?s=yinyue%EF%BC%89">https://www.qqxiuzi.cn/bianma/wenbenjiami.php?s=yinyue）</a></p>
 <p>得flag{da1ada1a}</p>
 <h2 id="base-family："><a href="#base-family：" class="headerlink" title="base family："></a>base family：</h2><p>base编码叠加转换：</p>
-<p><img src="C:\Users\63546\Desktop\writerup\DMCTF\basefamily.png"></p>
+<p><img src="/2021/01/11/DMCTFWP/Users\63546\Desktop\writerup\DMCTF\basefamily.png"></p>
 <p>观察形式，先用base91解码，然后用base58解码，再使用base32，之后是base64，解完后发现剩下的和base16相像，但注意，这里的编码英文字母全是小写，需要转换成大写，再进行base16解码，得flag{y0u_alr3ady_kn0w_th3_Basefam1ly}</p>
 <h2 id="SlientEye："><a href="#SlientEye：" class="headerlink" title="SlientEye："></a>SlientEye：</h2><p>下载后发现是一张图片，猜测是图片隐写，根据题目提示，使用slientye工具进解析，得到一个flag.txt，打开发现是一段HTML编码，在浏览器控制台输入得flag{n1_bu_j1ang_wu_d3}</p>
 <h2 id="编码之王："><a href="#编码之王：" class="headerlink" title="编码之王："></a>编码之王：</h2><p>打开发现是一段社会主义核心编码，解码后得到一段与佛论禅编码，而且是一段就佛曰编码，解码后又得一段佛曰，但由开头可知这次是新佛曰，解码后得到一段Jsfuck编码编码，直接在浏览器控制台输入，回车得DMCTF{Wow_you_kn0w_more_eNcoding}</p>
-<h2 id="kaomoji"><a href="#kaomoji" class="headerlink" title="kaomoji"></a>kaomoji</h2><p>下载后用ARCHPR进行明文破解，<img src="C:\Users\63546\Desktop\writerup\DMCTF\Snipaste_2020-11-28_21-23-34.png">得一个压缩包保存，打开得到一段颜文字编码，控制台输入解码得flag{kaomoj1_1s_cut3}</p>
+<h2 id="kaomoji"><a href="#kaomoji" class="headerlink" title="kaomoji"></a>kaomoji</h2><p>下载后用ARCHPR进行明文破解，<img src="/2021/01/11/DMCTFWP/Users\63546\Desktop\writerup\DMCTF\Snipaste_2020-11-28_21-23-34.png">得一个压缩包保存，打开得到一段颜文字编码，控制台输入解码得flag{kaomoj1_1s_cut3}</p>
 <h2 id="outguess："><a href="#outguess：" class="headerlink" title="outguess："></a>outguess：</h2><p>使用工具outguess用命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">outguess -r flag.jpg -t flag.txt</span><br></pre></td></tr></table></figure>
 <p>分离出来一个txt文件，第一行看起来是一个简单加密后的句子，试过一些后发现是凯撒密码，解密后提示的二行的解密内容是AES，且给了密码，找一个不需要偏移量的解密网站进行解密，得到flag{y0u_ar3_awes0m3}</p>
@@ -225,23 +225,23 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">steghide info trump.jpg</span><br></pre></td></tr></table></figure>
 <p>查看图片中隐藏的文件，可以看到含有一个flag.txt文件。使用命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">steghide extract -sf trump.jpg</span><br></pre></td></tr></table></figure>
-<p><img src="C:\Users\63546\Desktop\writerup\DMCTF\dsteghide_LI.jpg"></p>
+<p><img src="/2021/01/11/DMCTFWP/Users\63546\Desktop\writerup\DMCTF\dsteghide_LI.jpg"></p>
 <p>提取出文件。打开后发现是一些点、i和倒着的问号，经查阅可以猜到，这些应该是ook语言，利用记事本的替换功能将文件修改回ook语言的格式，在进行解码得到flag{y0u_ar3_clev3r}</p>
-<p><img src="C:\Users\63546\Desktop\writerup\DMCTF\Snipaste_2020-11-28_22-07-26.png"></p>
+<p><img src="/2021/01/11/DMCTFWP/Users\63546\Desktop\writerup\DMCTF\Snipaste_2020-11-28_22-07-26.png"></p>
 <h2 id="SSTV："><a href="#SSTV：" class="headerlink" title="SSTV："></a>SSTV：</h2><p>下载后发现是一段音频，根据题目提示，在卡里上使用QSTTV来分析音频，用命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install qsstv</span><br></pre></td></tr></table></figure>
-<p>安装qsstv，打开后在options-&gt;sound中的Sound Input中选择        From file， ok，再点蓝色的开始键选择音频开始解析<img src="C:\Users\63546\Desktop\writerup\DMCTF\Snipaste_2020-11-28_21-37-49.png"></p>
+<p>安装qsstv，打开后在options-&gt;sound中的Sound Input中选择        From file， ok，再点蓝色的开始键选择音频开始解析<img src="/2021/01/11/DMCTFWP/Users\63546\Desktop\writerup\DMCTF\Snipaste_2020-11-28_21-37-49.png"></p>
 <p>得到DMCTF{SSTV,yyds?}</p>
 <h1 id="WEB"><a href="#WEB" class="headerlink" title="WEB"></a>WEB</h1><h2 id="weak-type"><a href="#weak-type" class="headerlink" title="weak_type"></a>weak_type</h2><p>​    打开后得到源码，根据源码提示，通过三关即可得flag。</p>
 <p>第一关get传参，令num不为数字但转换为数字后为202020020，在其后加一个%23令其包含字符，就可以通关了。</p>
 <p>第二关是get传两个参数v1和v2，且让v1不等于v2,但在md5加密后相等，直接传数组v1[]=1,v2[]=2。</p>
 <p>第三关是post传参，直接让message=key即可。</p>
 <p>dmctf{fe77c01a-68df-48ca-a7c0-3f8a9b127e5b}</p>
-<p><img src="C:\Users\63546\Desktop\writerup\DMCTF\Snipaste_2020-11-28_22-04-14.png"></p>
+<p><img src="/2021/01/11/DMCTFWP/Users\63546\Desktop\writerup\DMCTF\Snipaste_2020-11-28_22-04-14.png"></p>
 <h2 id="fungame"><a href="#fungame" class="headerlink" title="fungame"></a>fungame</h2><p>下载源码，观察，在源码中找到一段异常的代码，复制下来，经过观察，这用该是JS加16进制的混合编码，并且发现用被分为几段，把第一段值用中括号括起来的值去掉“ “ ”和 “, ”处理过后，用16进制转为字符，得到一个网站：</p>
 <p><a target="_blank" rel="noopener" href="http://www.sojson.com/javascriptobfuscator.html">http://www.sojson.com/javascriptobfuscator.html</a></p>
 <p>进入网站，是一个JS解密加密网站，将得到的代码复制到解密框解密并进行转码后，寻找得DMctf{flag_is_here}</p>
-<p><img src="C:\Users\63546\Desktop\writerup\DMCTF\Snipaste_2020-11-28_21-48-58.png"></p>
+<p><img src="/2021/01/11/DMCTFWP/Users\63546\Desktop\writerup\DMCTF\Snipaste_2020-11-28_21-48-58.png"></p>
 
     </div>
 </article>
@@ -343,13 +343,13 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2021/01/08/hello-world/">Hello World</a>
+                    <a href="/2021/01/11/DMCTFWP/">DMCTF部分WP</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2021/01/11/DMCTFWP/">DMCTF部分WP</a>
+                    <a href="/2021/01/08/hello-world/">Hello World</a>
                 </span>
             </li>
             
