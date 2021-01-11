@@ -10,7 +10,7 @@
     
     
     
-    <title>archive_a | starfeather的Blog</title>
+    <title>github-hexo博客搭建 | starfeather的Blog</title>
     <link href="http://example.com" rel="prefetch" />
 
     
@@ -115,7 +115,7 @@
                 
                 
                 
-                <li class="current">
+                <li class="">
                     <a href="/archives">
                         <i class="fa fa-archive"></i>归档
                     </a>
@@ -158,19 +158,31 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    <article class="article well article-body" id="article-archive">
+                    
+<article class="article well article-body" id="article">
     <div class="breadcrumb">
         <i class="fa fa-home"></i>
         <a href="http://example.com">starfeather的Blog</a>
         >
-        <span>归档</span>
+        <span>github-hexo博客搭建</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/archives">归档</a>
+                <a href="/2021/01/11/github-hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">github-hexo博客搭建</a>
             </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2021-01-11
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-eye"></i>
+            </span>
+            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -178,35 +190,57 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/archives">归档</a>
+                    <a href="/2021/01/11/github-hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">github-hexo博客搭建</a>
                 </h4>
             </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2021-01-11
+            </p>
+            <p>
+                
+                
+                <i class="fa fa-eye"></i>
+                
+            </p>
         </center>
     </div>
-    <div class="content-article" style="margin-top: 30px;">
-        
-        
-            <h1 style="font-size: 24px; margin-top: 40px;">2021年</h1>
-            
-        <div class="alert alert-info" style="font-size: 14px; line-height: 2; font-weight: bold;">
-            
-             
-             
-                        <a href="/2021/01/11/github-hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">github-hexo博客搭建</a>
-                        <br>
-            
-             
-                        <a href="/2021/01/11/DMCTF%E9%83%A8%E5%88%86WP/">DMCTF部分WP</a>
-                        <br>
-            
-             
-                        <a href="/2021/01/08/hello-world/">Hello World</a>
-                        <br>
-            
-                    </div>
-        
+    <div class="content-article">
+        <h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备:"></a>前期准备:</h2><p><strong>安装node.js： <a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/">https://nodejs.org/zh-cn/</a></strong><br><strong>安装git： <a target="_blank" rel="noopener" href="https://git-scm.com/">https://git-scm.com/</a></strong><br>在网上寻找教程安装，如果没有特殊的要求或者情况，node.js一路next就行，至于git可以去找一下教程。<br><strong>注册一个github账号：<a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a></strong><br>注意，username最好先想好，在后期如果要改的话会很麻烦。<br>安装完成后，在命令窗口输入git version、node -v、npm -v 检测环境，如果如图所示（版本号不要求一样），则准备完成：<br><img src="https://img-blog.csdnimg.cn/20210111141827143.png" alt="在这里插入图片描述"></p>
+<p><strong><em>注意，以下虚线以上步骤除了先创建仓库才能配置SSH之外，其他的先后都可，如果配置不成功，可换一下顺序再试试</em></strong></p>
+<h2 id="一、创建仓库"><a href="#一、创建仓库" class="headerlink" title="一、创建仓库"></a>一、创建仓库</h2><p>登陆github，点击新建，新建仓库，第二张图中的username即为你github的用户名<br><img src="https://img-blog.csdnimg.cn/20210111143844649.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N0YXJfZmVhdGhlcg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210111144437903.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N0YXJfZmVhdGhlcg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="二、配置SSH链接"><a href="#二、配置SSH链接" class="headerlink" title="二、配置SSH链接"></a>二、配置SSH链接</h2><p>打开git bash，输入命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~&#x2F;.ssh&#x2F;id_rsa.pub</span><br></pre></td></tr></table></figure>
+<p>如果没有报错说明以前生成过，复制内容，<br><img src="https://img-blog.csdnimg.cn/20210111150340602.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N0YXJfZmVhdGhlcg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>如果之前没有创建，则执行以下命令全局配置一下本地账户：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;用户名&quot;    &#x2F;&#x2F;github用户名</span><br><span class="line">git config --global user.email &quot;邮箱地址&quot; &#x2F;&#x2F;注册github是用的邮箱</span><br></pre></td></tr></table></figure>
+<p>然后开始生成密钥 SSH key，根据提示，连续三次回车。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;your Email address&quot; &#x2F;&#x2F;上面注册时的邮箱</span><br></pre></td></tr></table></figure>
+<p>然后在通过上面的命令或者在C:user\username\.ssh\id_rsa.pub（默认路径） 查看并复制全部内容。<br>在github上点击头像，点击setting，找到SSH and PGP key，<br><img src="https://img-blog.csdnimg.cn/20210111150544189.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N0YXJfZmVhdGhlcg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20210111150646475.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N0YXJfZmVhdGhlcg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>点击new SSH key<br><img src="https://img-blog.csdnimg.cn/20210111150907268.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N0YXJfZmVhdGhlcg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>将刚刚复制的key内容（即.ssh\id_rsa.pub中的内容）粘贴到图示位置：<br><img src="https://img-blog.csdnimg.cn/20210111151042114.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N0YXJfZmVhdGhlcg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>点击Add SSH key，即添加成功。<br>可以用以下命令测试：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>如果返回这样的内容，则配置成功。有些可能需要输入几次命令才会返回正确信息，这里一般不容易错。<br><img src="https://img-blog.csdnimg.cn/20210111153341527.png" alt="在这里插入图片描述"></p>
+<h2 id="三、安装hexo，搭建本地博客"><a href="#三、安装hexo，搭建本地博客" class="headerlink" title="三、安装hexo，搭建本地博客"></a>三、安装hexo，搭建本地博客</h2><p>在git bash下输入命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;npm换淘宝源，如果自信网速、有耐心等或者有梯子可以忽略该步骤</span><br><span class="line">npm config set registry https:&#x2F;&#x2F;registry.npm.taobao.org</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;全局安装hexo，遇到warning不用管</span><br><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
+<p>建新一个安放博客的文件夹，我的是myBlog，cd 到该文件夹或者在改文件夹中打开git bash。输入命令初始化：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init  &#x2F;&#x2F;新建一个网站</span><br></pre></td></tr></table></figure>
+<p>到这，本地博客就搭建好了。如果之前没有报错的话，恭喜你，可以在git bash上输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p>打开<a href="http://localhost:4000，预览博客效果啦！">http://localhost:4000，预览博客效果啦！</a></p>
+<p>后续具体配置可以参考官网配置说明：<br><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">https://hexo.io/zh-cn/docs/</a></p>
+<p><em>———————————————————————————————</em></p>
+<h2 id="四、部署到github"><a href="#四、部署到github" class="headerlink" title="四、部署到github"></a>四、部署到github</h2><p>完成后，在存放hexo文件即存放博客的文件中（我的是myBlog）打开_config.yml文件，在最后改为如图信息：</p>
+<p><img src="https://img-blog.csdnimg.cn/2021011115444855.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N0YXJfZmVhdGhlcg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>在myBlog中，即存放hexo文件的地方打开git bash，输入命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save &#x2F;&#x2F;安装一个部署插件 hexo-deployer-git</span><br><span class="line"></span><br><span class="line">hexo cl  &#x2F;&#x2F;**(初次建立可不使用这条命令)**清除缓存文件 (db.json) 和已生成的静态文件 (public)。在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</span><br><span class="line"></span><br><span class="line">hexo g   &#x2F;&#x2F;生成</span><br><span class="line"></span><br><span class="line">hexo s   &#x2F;&#x2F;启动服务，可以在本地预览博客</span><br><span class="line"></span><br><span class="line">hexo d   &#x2F;&#x2F;上传到github仓库</span><br></pre></td></tr></table></figure>
+<p>GitHub Pages需要加载时间，上传之后可能不会立刻解析，等待一段时间后，搜索 username.github.io 即可看到博客。</p>
+<h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><p>网上有很多写作方法，个人推荐现在CSDN上写，完成后导出markdown文件，然后放到 ~\source_posts  的文件夹里，里面有一个自动生成的博客HolleWord.md，注意给导出的文件加标题。</p>
+
     </div>
 </article>
+
+
                 </div>
                 <aside class="col-md-4 gal-left" id="sidebar">
     <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
@@ -336,12 +370,12 @@
 
                 
                 <li>
-                    <a href="/archives/2021/01/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2021/01/11/github-hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 
                 
                 <li>
-                    <a href="/archives/2021/01/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2021/01/11/github-hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 
                 
