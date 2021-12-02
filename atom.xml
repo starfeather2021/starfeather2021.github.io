@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>star-feather</title>
+  
+  <subtitle>--BLOG</subtitle>
+  <link href="https://starfeather2021.github.io/project/atom.xml" rel="self"/>
+  
+  <link href="https://starfeather2021.github.io/project/"/>
+  <updated>2021-12-02T01:48:35.343Z</updated>
+  <id>https://starfeather2021.github.io/project/</id>
+  
+  <author>
+    <name>star-feather</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://starfeather2021.github.io/project/2021/12/02/README/"/>
+    <id>https://starfeather2021.github.io/project/2021/12/02/README/</id>
+    <published>2021-12-02T10:42:21.003Z</published>
+    <updated>2021-12-02T01:48:35.343Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Landscape"><a href="#Landscape" class="headerlink" title="Landscape"></a>Landscape</h1><p>A brand new default theme for <a href="https://hexo.io/">Hexo</a>.</p><ul><li><a href="http://hexo.io/hexo-theme-landscape/">Preview</a></li></ul><h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><h3 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/hexojs/hexo-theme-landscape.git themes/landscape</span><br></pre></td></tr></table></figure><p><strong>Landscape requires Hexo 2.4 and above.</strong> If you would like to enable the RSS, the <a href="https://github.com/hexojs/hexo-generator-feed">hexo-generate-feed</a> plugin is also required.</p><h3 id="Enable"><a href="#Enable" class="headerlink" title="Enable"></a>Enable</h3><p>Modify <code>theme</code> setting in <code>_config.yml</code> to <code>landscape</code>.</p><h3 id="Update"><a href="#Update" class="headerlink" title="Update"></a>Update</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> themes/landscape</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure><h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Header</span></span><br><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">Home:</span> <span class="string">/</span></span><br><span class="line">  <span class="attr">Archives:</span> <span class="string">/archives</span></span><br><span class="line"><span class="attr">rss:</span> <span class="string">/atom.xml</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Content</span></span><br><span class="line"><span class="attr">excerpt_link:</span> <span class="string">Read</span> <span class="string">More</span></span><br><span class="line"><span class="attr">fancybox:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Sidebar</span></span><br><span class="line"><span class="attr">sidebar:</span> <span class="string">right</span></span><br><span class="line"><span class="attr">widgets:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">category</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">tag</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">tagcloud</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">archives</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">recent_posts</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Miscellaneous</span></span><br><span class="line"><span class="attr">google_analytics:</span></span><br><span class="line"><span class="attr">favicon:</span> <span class="string">/favicon.png</span></span><br><span class="line"><span class="attr">twitter:</span></span><br><span class="line"><span class="attr">google_plus:</span></span><br></pre></td></tr></table></figure><ul><li><strong>menu</strong> - Navigation menu</li><li><strong>rss</strong> - RSS link</li><li><strong>excerpt_link</strong> - “Read More” link at the bottom of excerpted articles. <code>false</code> to hide the link.</li><li><strong>fancybox</strong> - Enable <a href="http://fancyapps.com/fancybox/">Fancybox</a></li><li><strong>sidebar</strong> - Sidebar style. You can choose <code>left</code>, <code>right</code>, <code>bottom</code> or <code>false</code>.</li><li><strong>widgets</strong> - Widgets displaying in sidebar</li><li><strong>google_analytics</strong> - Google Analytics ID</li><li><strong>favicon</strong> - Favicon path</li><li><strong>twitter</strong> - Twiiter ID</li><li><strong>google_plus</strong> - Google+ ID</li></ul><h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><h3 id="Fancybox"><a href="#Fancybox" class="headerlink" title="Fancybox"></a>Fancybox</h3><p>Landscape uses <a href="http://fancyapps.com/fancybox/">Fancybox</a> to showcase your photos. You can use Markdown syntax or fancybox tag plugin to add your photos.</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">![img caption](img url)</span><br><span class="line"></span><br><span class="line">&#123;% fancybox img_url [img_thumbnail] [img_caption] %&#125;</span><br></pre></td></tr></table></figure><h3 id="Sidebar"><a href="#Sidebar" class="headerlink" title="Sidebar"></a>Sidebar</h3><p>You can put your sidebar in left side, right side or bottom of your site by editing <code>sidebar</code> setting.</p><p>Landscape provides 5 built-in widgets:</p><ul><li>category</li><li>tag</li><li>tagcloud</li><li>archives</li><li>recent_posts</li></ul><p>All of them are enabled by default. You can edit them in <code>widget</code> setting.</p><h2 id="Development"><a href="#Development" class="headerlink" title="Development"></a>Development</h2><h3 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h3><ul><li><a href="http://gruntjs.com/">Grunt</a> 0.4+</li><li>Hexo 2.4+</li></ul><h3 id="Grunt-tasks"><a href="#Grunt-tasks" class="headerlink" title="Grunt tasks"></a>Grunt tasks</h3><ul><li><strong>default</strong> - Download <a href="http://fancyapps.com/fancybox/">Fancybox</a> and <a href="http://fontawesome.io/">Font Awesome</a>.</li><li><strong>fontawesome</strong> - Only download <a href="http://fontawesome.io/">Font Awesome</a>.</li><li><strong>fancybox</strong> - Only download <a href="http://fancyapps.com/fancybox/">Fancybox</a>.</li><li><strong>clean</strong> - Clean temporarily files and downloaded files.</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Landscape&quot;&gt;&lt;a href=&quot;#Landscape&quot; class=&quot;headerlink&quot; title=&quot;Landscape&quot;&gt;&lt;/a&gt;Landscape&lt;/h1&gt;&lt;p&gt;A brand new default theme for &lt;a href=&quot;htt</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://starfeather2021.github.io/project/2021/12/02/hello-world/"/>
+    <id>https://starfeather2021.github.io/project/2021/12/02/hello-world/</id>
+    <published>2021-12-02T01:54:26.921Z</published>
+    <updated>2021-12-02T01:48:35.342Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
